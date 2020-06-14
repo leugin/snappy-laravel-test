@@ -62,7 +62,7 @@
             <table  style="width: 100%;" cellpadding="0" cellspacing="3px">
                 <tr >
                     <td class="b-bottom" colspan="2">
-                       <strong> Caractiristicas Técnicas</strong>
+                        <strong> Caractiristicas Técnicas</strong>
                     </td>
                 </tr>
                 <tr>
@@ -122,6 +122,81 @@
 
             <table>
                 @switch(sizeof($images))
+                    @case(1)
+                    <tr>
+                        <td colspan="2">
+                            <img src="{{$images[0]}}" class="img-fluid">
+                        </td>
+
+                    </tr>
+                    @break
+                    @case(2)
+                    <tr>
+                        <td>
+                            <img src="{{$images[0]}}" class="img-fluid">
+                        </td>
+                        <td>
+                            <img src="{{$images[1]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    @break
+                    @case(3)
+                    <tr>
+                        <td>
+                            <img src="{{$images[0]}}" class="img-fluid">
+                        </td>
+                        <td>
+                            <img src="{{$images[1]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="{{$images[2]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    @break
+                    @case(4)
+                    <tr>
+                        <td>
+                            <img src="{{$images[0]}}" class="img-fluid">
+                        </td>
+                        <td>
+                            <img src="{{$images[1]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="{{$images[2]}}" class="img-fluid">
+                        </td>
+                        <td>
+                            <img src="{{$images[3]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    @break
+                    @case(5)
+                    <tr>
+                        <td>
+                            <img src="{{$images[0]}}" class="img-fluid">
+                        </td>
+                        <td>
+                            <img src="{{$images[1]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="{{$images[2]}}" class="img-fluid">
+                        </td>
+                        <td>
+                            <img src="{{$images[3]}}" class="img-fluid">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="{{$images[4]}}" class="img-fluid">
+                        </td>
+
+                    </tr>
+                    @break
                     @case(6)
                     <tr>
                         <td>

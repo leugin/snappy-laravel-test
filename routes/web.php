@@ -18,12 +18,12 @@ Route::get('/', function () {
 Route::get('/test', function () {
 
     $images = [
-        public_path('filtersdemo/air-filter.jpg'),
-        public_path('filtersdemo/airFilter.jpg'),
-        public_path('filtersdemo/oil-filter.jpg'),
-        public_path('filtersdemo/OILcartridge.jpg'),
-        public_path('filtersdemo/OILspin.jpg'),
-        public_path('filtersdemo/oli-filter2.jpg')
+//        public_path('filtersdemo/air-filter.jpg'),
+//        public_path('filtersdemo/airFilter.jpg'),
+//        public_path('filtersdemo/oil-filter.jpg'),
+//        public_path('filtersdemo/OILcartridge.jpg'),
+//        public_path('filtersdemo/OILspin.jpg'),
+//        public_path('filtersdemo/oli-filter2.jpg')
     ];
     $data = [
         'images'=>$images,
