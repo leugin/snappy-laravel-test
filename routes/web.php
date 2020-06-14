@@ -16,7 +16,32 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    $pdf = \App::make('snappy.pdf.wrapper');
-    $pdf->loadHTML('<h1>Test</h1>');
-    return $pdf->inline();
+
+    $images = [
+        public_path('filtersdemo/air-filter.jpg'),
+        public_path('filtersdemo/airFilter.jpg'),
+        public_path('filtersdemo/oil-filter.jpg'),
+        public_path('filtersdemo/OILcartridge.jpg'),
+        public_path('filtersdemo/OILspin.jpg'),
+        public_path('filtersdemo/oli-filter2.jpg')
+    ];
+    $data = [
+        'images'=>$images,
+        'barcodes'=>[
+            public_path('filtersdemo/air-filter.jpg'),
+            public_path('filtersdemo/air-filter.jpg'),
+        ]
+    ];
+
+    $pdf = app()->make('snappy.pdf.wrapper');
+    $pdf->loadView( 'reports.technical_document', $data)
+
+//        ->setOption('margin-top', 5)
+//        ->setOption('margin-bottom', 5)
+//        ->setOption('margin-left', 5)
+//        ->setOption('margin-right', 5)
+    ;
+    $pdf->setOption('header-html', '');
+    return  $pdf->inline();
+    return view('reports.technical_document',$data);
 });
